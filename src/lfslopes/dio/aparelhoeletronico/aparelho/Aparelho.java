@@ -1,4 +1,4 @@
-package lfslopes.dio.aparelhoeletronico;
+package lfslopes.dio.aparelhoeletronico.aparelho;
 
 public interface Aparelho {
     void ligarTela();

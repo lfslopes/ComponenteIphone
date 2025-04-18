@@ -1,5 +1,4 @@
-package lfslopes.dio.aparelhoeletronico;
-import lfslopes.dio.aparelhoeletronico.exceptions.AparelhoException;
+package lfslopes.dio.aparelhoeletronico.aparelho;
 
 public abstract class AparelhoEletronico implements Aparelho, AparelhoBateria {
     private String modelo;
