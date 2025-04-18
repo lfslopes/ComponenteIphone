@@ -4,9 +4,27 @@
 classDiagram
   class Aparelho{
     <<interface>>
-    +ligarTela()
-    +desligarTela()
-    +desbloquearTela()
-}
+    +ligarTela(): void
+    +desligarTela(): void
+    +desbloquearTela(): void
+  }
+  class AparelhoBateria{
+    <<interface>>
+    +ligar(): void
+    +desligar(): void
+    +verificarBateria(): void
+    +recarregarBateria(): void
+  }
+  class AparelhoEletronico{
+    <<abstract>>
+    -modelo: String
+    -descricao: String
+    -bateria: int
+    -ligado: boolean
+    -telaLigada: boolean
+    -desbloqueado: boolean
+  }
+  Aparelho ..> AparelhoEletronico
+  AparelhoBateria ..> AparelhoEletronico
 ```
 
