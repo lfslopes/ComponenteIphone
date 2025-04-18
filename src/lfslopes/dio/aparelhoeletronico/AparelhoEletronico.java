@@ -17,7 +17,9 @@ public abstract class AparelhoEletronico implements Aparelho, AparelhoBateria {
         this.telaLigada = false;
         this.desbloqueado = false;
     }
-    protected boolean desbloquearCheck (){
-        return this.telaLigada;
+    protected void desbloquear () throws AparelhoException {
+        if (!this.telaLigada)
+            throw new AparelhoException("Tela desligada. Ligue-a para desbloquear");
+        this.desbloqueado = true;
     }
 }
