@@ -1,21 +1,25 @@
 # Classificação da abstração de um Aparelho
 
 ```mermaid
+---
+title: Aparelho Eletrônico
+---
 classDiagram
-  class Aparelho{
+  namespace aparelho {
+    class Aparelho{
     <<interface>>
     +ligarTela(): void
     +desligarTela(): void
     +desbloquearTela(): void
-  }
-  class AparelhoBateria{
+    }
+    class AparelhoBateria{
     <<interface>>
     +ligar(): void
     +desligar(): void
     +verificarBateria(): void
     +recarregarBateria(): void
-  }
-  class AparelhoEletronico{
+    }
+    class AparelhoEletronico{
     <<abstract>>
     -modelo: String
     -descricao: String
@@ -23,8 +27,9 @@ classDiagram
     -ligado: boolean
     -telaLigada: boolean
     -desbloqueado: boolean
-  }
-  Aparelho ..> AparelhoEletronico
-  AparelhoBateria ..> AparelhoEletronico
+    }
+}
+Aparelho <.. AparelhoEletronico : implementa
+AparelhoBateria <.. AparelhoEletronico : implementa
 ```
 
