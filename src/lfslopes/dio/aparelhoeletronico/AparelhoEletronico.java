@@ -1,4 +1,5 @@
 package lfslopes.dio.aparelhoeletronico;
+import lfslopes.dio.aparelhoeletronico.exceptions.AparelhoException;
 
 public abstract class AparelhoEletronico implements Aparelho, AparelhoBateria {
     private String modelo;
@@ -15,5 +16,8 @@ public abstract class AparelhoEletronico implements Aparelho, AparelhoBateria {
         this.ligado = true;
         this.telaLigada = false;
         this.desbloqueado = false;
+    }
+    protected boolean desbloquearCheck (){
+        return this.telaLigada;
     }
 }
