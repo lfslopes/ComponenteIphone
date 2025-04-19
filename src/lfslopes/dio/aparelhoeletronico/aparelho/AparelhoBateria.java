@@ -4,5 +4,5 @@ public interface AparelhoBateria {
     void ligar();
     void desligar();
     void verificarBateria();
-    void recarregarBateria();
+    void recarregarBateria() throws InterruptedException;
 }
