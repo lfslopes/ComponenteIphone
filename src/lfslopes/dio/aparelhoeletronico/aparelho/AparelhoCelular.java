@@ -1,5 +1,7 @@
 package lfslopes.dio.aparelhoeletronico.aparelho;
 
+import lfslopes.dio.aparelhoeletronico.aplicacoes.AgendaTelefonica;
+import lfslopes.dio.aparelhoeletronico.aplicacoes.NavegadorWeb;
 import lfslopes.dio.aparelhoeletronico.aplicacoes.ReprodutorMusical;
 import lfslopes.dio.aparelhoeletronico.exceptions.AparelhoException;
 
@@ -45,7 +47,6 @@ public class AparelhoCelular extends AparelhoEletronico{
         System.out.println("3 - Navegador de Internet");
         opcao = scanner.nextInt();
 
-        //TODO adicionar a entrada nas aplicações, de acordo com a aplicação selecionada
 
         switch (opcao) {
             case 1:
@@ -53,9 +54,16 @@ public class AparelhoCelular extends AparelhoEletronico{
                 reprodutor.abrirAplicacao();
                 break;
             case 2:
-
+                AgendaTelefonica agenda = new AgendaTelefonica();
+                agenda.abrirAplicacao();
+                break;
+            case 3:
+                NavegadorWeb navegador = new NavegadorWeb();
+                navegador.abrirAplicacao();
+                break;
+            default:
+                System.out.println("Opção inválida. Encerrando...");
         }
-
     }
 
     @Override
