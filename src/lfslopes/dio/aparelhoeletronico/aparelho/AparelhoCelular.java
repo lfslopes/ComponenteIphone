@@ -44,6 +44,8 @@ public class AparelhoCelular extends AparelhoEletronico{
         System.out.println("3 - Navegador de Internet");
         opcao = scanner.nextInt();
 
+        //TODO adicionar a entrada nas aplicações, de acordo com a aplicação selecionada
+
     }
 
     @Override
