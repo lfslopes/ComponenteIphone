@@ -1,5 +1,6 @@
 package lfslopes.dio.aparelhoeletronico.aparelho;
 
+import lfslopes.dio.aparelhoeletronico.aplicacoes.ReprodutorMusical;
 import lfslopes.dio.aparelhoeletronico.exceptions.AparelhoException;
 
 import java.util.Scanner;
@@ -45,6 +46,15 @@ public class AparelhoCelular extends AparelhoEletronico{
         opcao = scanner.nextInt();
 
         //TODO adicionar a entrada nas aplicações, de acordo com a aplicação selecionada
+
+        switch (opcao) {
+            case 1:
+                ReprodutorMusical reprodutor = new ReprodutorMusical();
+                reprodutor.abrirAplicacao();
+                break;
+            case 2:
+
+        }
 
     }
 

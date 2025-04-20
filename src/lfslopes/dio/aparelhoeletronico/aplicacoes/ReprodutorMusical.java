@@ -18,7 +18,16 @@ public class ReprodutorMusical implements Aplicacao {
         System.out.println("Aplicativo de reprodução de músicas está aberto. Deseja selecionar uma música para tocar");
         Scanner scanner = new Scanner(System.in);
         selecionarMusica(scanner.nextLine());
-        this.tocar();
+
+        System.out.println("Deseja continuar ouvindo música? (S/N)");
+        String continuar = scanner.nextLine();
+        while (continuar.equalsIgnoreCase("s")) {
+            System.out.print("Qual será a próxima faixa: ");
+            selecionarMusica(scanner.nextLine());
+            System.out.println("Deseja continuar? (S/N)");
+            continuar = scanner.nextLine();
+        }
+        this.fecharAplicacao();
     }
 
     @Override
@@ -35,6 +44,7 @@ public class ReprodutorMusical implements Aplicacao {
     }
     public void selecionarMusica (String musica) {
         this.musica = musica;
+        this.tocar();
         System.out.println("Reproduzindo a faixa " + this.musica);
     }
 }
