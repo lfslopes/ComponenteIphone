@@ -27,6 +27,7 @@ public class ReprodutorMusical implements Aplicacao {
             System.out.println("Deseja continuar? (S/N)");
             continuar = scanner.nextLine();
         }
+        this.pausar();
         this.fecharAplicacao();
     }
 

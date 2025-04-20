@@ -47,7 +47,6 @@ public class AparelhoCelular extends AparelhoEletronico{
         System.out.println("3 - Navegador de Internet");
         opcao = scanner.nextInt();
 
-
         switch (opcao) {
             case 1:
                 ReprodutorMusical reprodutor = new ReprodutorMusical();
@@ -63,6 +62,11 @@ public class AparelhoCelular extends AparelhoEletronico{
                 break;
             default:
                 System.out.println("Opção inválida. Encerrando...");
+        }
+        this.setBateria(this.getBateria() - 10);
+        if (this.getBateria() <= 0) {
+            System.out.println("Celular descarregado. Coloque-o para carregar e ligue novamente");
+            this.desligar();
         }
     }
 
@@ -103,6 +107,8 @@ public class AparelhoCelular extends AparelhoEletronico{
     }
     @Override
     public void desligar() {
+        this.setDesbloqueado(false);
+        this.setTelaLigada(false);
         this.setLigado(false);
     }
 

@@ -32,15 +32,13 @@ public class NavegadorWeb implements Aplicacao{
     public void exibirPagina(String url) {
         if (url == null)
             throw new AplicacaoException("Sem url para exibir");
-        if (this.paginas.contains(url))
+        if (!this.paginas.contains(url))
         {
             this.adicionarNovaAba();
             String pagina = paginas.get(abas - 1);
             this.paginas.get(this.abas - 1).replace(pagina, url);
-        } else {
-            this.paginas.add(url);
-            this.abas++;
-        }
+        } else
+            atualizarPagina();
         System.out.println("Exibindo " + url);
     }
     public void adicionarNovaAba() {
@@ -49,6 +47,5 @@ public class NavegadorWeb implements Aplicacao{
     }
     public void atualizarPagina() {
         System.out.println("Atualizando pagina");
-        System.out.println("Exibindo " + this.paginas.get(this.abas - 1));
     }
 }
