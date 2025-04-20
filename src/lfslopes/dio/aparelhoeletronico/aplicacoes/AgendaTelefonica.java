@@ -30,6 +30,7 @@ public class AgendaTelefonica implements Aplicacao {
         System.out.println("3 - Iniciar correio de voz");
         Scanner scanner = new Scanner(System.in);
         int opcao = scanner.nextInt();
+        scanner.nextLine();
 
         switch (opcao) {
             case 1:
