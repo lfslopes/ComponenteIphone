@@ -86,4 +86,4 @@ Esse aparelho vai definir, através de escolhas dos usuários, qual aplicação 
   
 Temos o reprodutor de músicas, onde o usuário seleciona uma música para reproduzir e coloca para tocar. Logo depois, pede para executar uma outra música e repete o ciclo até que o usuário deseje sair.  
 Temos também a agenda telefônica, onde o usuário escolhe se quer ligar para alguém, atender uma ligação (caso ela exista), ou ver seus correios de voz.  
-E por último, o navegador web, onde o usuário escolhe em qual site deseja navegar, ou se cria uma nova aba ou atualiza a página.
+E por último, o navegador web, onde o usuário escolhe em qual site deseja navegar, ou se cria uma nova aba ou atualiza a página.  
